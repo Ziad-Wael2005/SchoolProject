@@ -36,6 +36,9 @@
             public const string Paginated = prefix + "Paginated";
             public const string GetById = prefix + "{id}";
 
+            public const string Edit = prefix + "Edit";
+            public const string ChangePassword = prefix + "Change-Password";
+            public const string Delete = prefix + "{id}";
 
 
         }

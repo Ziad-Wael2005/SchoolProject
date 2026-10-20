@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using SchoolProject.Core.Bases;
 using SchoolProject.Core.Features.ApplicationUser.Query.Model;
@@ -38,10 +37,11 @@ namespace SchoolProject.Core.Features.ApplicationUser.Query.Handler
 
 
 
-        public async Task<Response<GetUserByIdResponse>> Handle( GetUserByIdQuery request,CancellationToken cancellationToken) {
+        public async Task<Response<GetUserByIdResponse>> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
+        {
             //var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id==request.Id);
             var user = await _userManager.FindByIdAsync(request.Id.ToString());
-            if (user == null) return NotFound<GetUserByIdResponse>(_sharedResources[SharedResourcesKeys.NotFound]);
+            if (user == null) return NotFound<GetUserByIdResponse>(_stringLocalizer[SharedResourcesKeys.Notfound]);
             var result = _mapper.Map<GetUserByIdResponse>(user);
             return Success(result);
         }

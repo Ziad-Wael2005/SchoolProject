@@ -159,4 +159,13 @@
   <data name="FaildToAddUser" xml:space="preserve">
     <value>فشلت عمليه الاضافه </value>
   </data>
+  <data name="UpdateFailed" xml:space="preserve">
+    <value>حدث خطا اثناء عمليه تحديث البيانات </value>
+  </data>
+  <data name="DeletedFailed" xml:space="preserve">
+    <value>حدث خطا اثناء عمليه حذف البيانات </value>
+  </data>
+  <data name="ChangePassFailed" xml:space="preserve">
+    <value>حدث خطا اثناء عمليه تغير الرقم السرى </value>
+  </data>
 </root>
